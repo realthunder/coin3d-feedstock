@@ -1,7 +1,7 @@
 channel_sources:
   - realthunder,conda-forge,defaults
 channel_targets:
-  - realthunder master
+  - realthunder main
 c_compiler:           # [win]
     - vs2022          # [win]
 cxx_compiler:         # [win]
