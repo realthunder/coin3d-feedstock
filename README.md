@@ -28,14 +28,14 @@ Current release info
 Installing coin3d-rt
 ====================
 
-Installing `coin3d-rt` from the `realthunder/label/master` channel can be achieved by adding `realthunder/label/master` to your channels with:
+Installing `coin3d-rt` from the `realthunder` channel can be achieved by adding `realthunder` to your channels with:
 
 ```
-conda config --add channels realthunder/label/master
+conda config --add channels realthunder
 conda config --set channel_priority strict
 ```
 
-Once the `realthunder/label/master` channel has been enabled, `coin3d-rt` can be installed with `conda`:
+Once the `realthunder` channel has been enabled, `coin3d-rt` can be installed with `conda`:
 
 ```
 conda install coin3d-rt
@@ -50,26 +50,26 @@ mamba install coin3d-rt
 It is possible to list all of the versions of `coin3d-rt` available on your platform with `conda`:
 
 ```
-conda search coin3d-rt --channel realthunder/label/master
+conda search coin3d-rt --channel realthunder
 ```
 
 or with `mamba`:
 
 ```
-mamba search coin3d-rt --channel realthunder/label/master
+mamba search coin3d-rt --channel realthunder
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search coin3d-rt --channel realthunder/label/master
+mamba repoquery search coin3d-rt --channel realthunder
 
 # List packages depending on `coin3d-rt`:
-mamba repoquery whoneeds coin3d-rt --channel realthunder/label/master
+mamba repoquery whoneeds coin3d-rt --channel realthunder
 
 # List dependencies of `coin3d-rt`:
-mamba repoquery depends coin3d-rt --channel realthunder/label/master
+mamba repoquery depends coin3d-rt --channel realthunder
 ```
 
 

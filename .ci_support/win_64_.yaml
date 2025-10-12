@@ -3,11 +3,9 @@ c_stdlib:
 channel_sources:
 - realthunder,conda-forge,defaults
 channel_targets:
-- realthunder master
+- realthunder main
 cxx_compiler:
 - vs2022
-expat:
-- '2'
 libboost_devel:
 - '1.88'
 target_platform:
