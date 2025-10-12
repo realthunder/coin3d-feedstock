@@ -26,18 +26,20 @@ requirements:
     - cmake
     - ninja
   host:
-    - libboost-devel
+    - libboost-devel 1.84
     - libgl-devel     # [linux]
     - libglu          # [linux]
     - xorg-libxt      # [linux]
     - xorg-libxi      # [linux]
-    - expat <2.6 *|>=2.5.0,<2.6.0a0 *
+    - expat
+    - libexpat >=2.5.0,<3.0a0 *
   run:
-    # - libboost
+    - libboost 1.84
     - libglu          # [linux]
     - xorg-libxt      # [linux]
     - xorg-libxi      # [linux]
-    - expat <2.6 *|>=2.5.0,<2.6.0a0 *
+    - expat
+    - libexpat >=2.5.0,<3.0a0 *
 
 # test:
 #   requires:
