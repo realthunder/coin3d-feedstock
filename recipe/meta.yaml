@@ -31,6 +31,7 @@ requirements:
     - libglu          # [linux]
     - xorg-libxt      # [linux]
     - xorg-libxi      # [linux]
+    - libxcb 1.15     # [linux]
     - expat 2.5.0
   run:
     - libboost 1.84
