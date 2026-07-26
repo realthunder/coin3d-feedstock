@@ -1,5 +1,5 @@
 {% set name = "coin3d-rt" %}
-{% set version = "20251011" %}
+{% set version = "20260726" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/realthunder/coin/archive/refs/tags/{{ version }}.tar.gz
-    sha256: b70169220a20eaf3db2420cbf739ea149cb48a78058964be20bb3377f9f534b5
+    sha256: 7b29e6d8450b4d3017e0e5f754f2d435bda6953a9b5a3b7ac1dfdebcd594fe0c
 
   - url: https://github.com/realthunder/superglu/archive/refs/tags/v1.3.1-conda.tar.gz
     sha256: 1ff45bb0fa703eee730b51911acb0d14c46ba66adce01be5167b14694e123018
