@@ -1,13 +1,16 @@
 {% set name = "coin3d-rt" %}
-{% set version = "20260726" %}
+{% set version = "20260915" %}
+{# The fork's LinkVibe at that date: CoinRT, SoLazyElementEx, the MaterialX shader #}
+{# source and COIN_BUILD_GL_STUB, all of which the program needs. #}
+{% set rev = "d2da5cc9379d4f54ea00760d377ef661ac9dc102" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  - url: https://github.com/realthunder/coin/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 7b29e6d8450b4d3017e0e5f754f2d435bda6953a9b5a3b7ac1dfdebcd594fe0c
+  - url: https://github.com/realthunder/coin/archive/{{ rev }}.tar.gz
+    sha256: c3350bfbd530c5a14f18028a4f98576502f9beff6854d1869ae19c882a483782
 
   - url: https://github.com/realthunder/superglu/archive/refs/tags/v1.3.1-conda.tar.gz
     sha256: 1ff45bb0fa703eee730b51911acb0d14c46ba66adce01be5167b14694e123018
@@ -26,19 +29,23 @@ requirements:
     - cmake
     - ninja
   host:
-    - libboost-devel 1.84
+    # The stack's: smesh wants libboost >=1.90,<1.91, and one libboost is
+    # resolved per environment.
+    - libboost-devel 1.90
     - libgl-devel     # [linux]
     - libglu          # [linux]
     - xorg-libxt      # [linux]
     - xorg-libxi      # [linux]
-    - libxcb 1.15     # [linux]
-    - expat 2.5.0
+    - libxcb          # [linux]
+    - expat
   run:
-    - libboost 1.84
+    - libboost 1.90
     - libglu          # [linux]
     - xorg-libxt      # [linux]
     - xorg-libxi      # [linux]
-    - expat 2.5.0
+    # Not pinned: occt wants libexpat >=2.8.1, so an old pin here left no
+    # environment holding both.
+    - expat
 
 # test:
 #   requires:
